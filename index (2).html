@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Egyensúlyrendszer — Rendszerszemlélet a mellékhatások kezelésére</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+          <line x1="16" y1="6" x2="16" y2="15" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M16 15 L12 21 L20 21 Z" fill="#EAF2FC"/>
+          <line x1="7" y1="13" x2="25" y2="17" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="7" cy="13" r="3.3" fill="#3B8EF0" stroke="#0A1B2E" stroke-width="1"/>
+          <circle cx="25" cy="17" r="3.3" fill="#4FCB9C" stroke="#0A1B2E" stroke-width="1"/>
+        </svg>
+      </span>
+      Egyensúlyrendszer
+    </a>
+    <nav class="nav-links">
+      <a href="#modell">A modell</a>
+      <a href="#interaktiv">Interaktív modell</a>
+      <a href="#teruletek">Alkalmazási területek</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#csatlakozas">Csatlakozás</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:76px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow mono">RENDSZERSZEMLÉLET · VISSZACSATOLÁS</span>
+        <h1 class="hero-title">Minden ösztönzőnek szüksége van egy <em>ellensúlyra</em>.</h1>
+        <p class="hero-sub">Az Egyensúlyrendszer egy gondolkodási keret: ha egy piac, intézmény vagy társadalmi tevékenység jogi, gazdasági vagy intézményi ösztönzést kap — vagy abból bevétel származik —, akkor szükség van egy arányos mechanizmusra is, amely méri, kezeli és ellensúlyozza a következményeit.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#modell">Fedezd fel a modellt →</a>
+          <a class="btn btn-ghost" href="#teruletek">Alkalmazási területek</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>4</b><span>rendszerelem</span></div>
+          <div class="hero-stat"><b>3</b><span>vizsgált terület</span></div>
+          <div class="hero-stat"><b>1</b><span>visszacsatolási hurok</span></div>
+        </div>
+      </div>
+
+      <div class="diagram-card">
+        <span class="diagram-label mono">A RENDSZER LOGIKÁJA — ÉLŐ HUROK</span>
+        <svg class="loop-svg" viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Az Egyensúlyrendszer négy eleme körkörös visszacsatolásban: Ösztönzők, Rendszer, Következmények, Egyensúlyrendszer">
+          <!-- nodes -->
+          <g class="loop-node">
+            <rect x="14" y="18" width="180" height="56" rx="8"></rect>
+            <text x="28" y="40" class="num" font-size="11">01</text>
+            <text x="28" y="60" font-size="13" font-weight="600">Ösztönzők</text>
+          </g>
+          <g class="loop-node">
+            <rect x="266" y="18" width="180" height="56" rx="8"></rect>
+            <text x="280" y="40" class="num" font-size="11">02</text>
+            <text x="280" y="60" font-size="13" font-weight="600">Rendszer</text>
+          </g>
+          <g class="loop-node">
+            <rect x="266" y="222" width="180" height="56" rx="8"></rect>
+            <text x="280" y="244" class="num" font-size="11">03</text>
+            <text x="280" y="264" font-size="13" font-weight="600">Következmények</text>
+          </g>
+          <g class="loop-node">
+            <rect x="14" y="222" width="180" height="56" rx="8"></rect>
+            <text x="28" y="244" class="num" font-size="11">04</text>
+            <text x="28" y="264" font-size="13" font-weight="600">Egyensúlyrendszer</text>
+          </g>
+
+          <!-- forward flow -->
+          <path class="flow-line" d="M194 46 H266" marker-end="url(#arrow)"></path>
+          <path class="flow-line" d="M356 74 V222" marker-end="url(#arrow)"></path>
+          <path class="flow-line" d="M266 250 H194" marker-end="url(#arrow)"></path>
+
+          <!-- feedback loop -->
+          <path class="feedback-line" d="M104 222 V104" marker-end="url(#arrowblue)"></path>
+          <text x="112" y="165" class="feedback-tag">visszacsatolás</text>
+
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#3A5878"></path>
+            </marker>
+            <marker id="arrowblue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#2C7BE5"></path>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELL / LOGIKA -->
+  <section id="modell">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">A FOGALOM</span>
+        <h2>Mi az Egyensúlyrendszer?</h2>
+        <p>Azoknak az intézményeknek, szabályoknak, programoknak és visszacsatolási mechanizmusoknak az összessége, amelyek egy társadalmi vagy gazdasági rendszer negatív mellékhatásait ellensúlyozzák, és hozzájárulnak a rendszeregyensúly fenntartásához.</p>
+      </div>
+
+      <div class="flow-row">
+        <div class="flow-step">
+          <span class="num">01</span>
+          <h3>Ösztönzők</h3>
+          <p>Jogi, gazdasági és intézményi keretek, amelyek egy tevékenységet lehetővé tesznek vagy ösztönöznek.</p>
+          <span class="flow-arrow">→</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">02</span>
+          <h3>Rendszer</h3>
+          <p>A piac, intézmény vagy társadalmi tevékenység, amely az ösztönzők hatására működésbe lép.</p>
+          <span class="flow-arrow">→</span>
+        </div>
+        <div class="flow-step">
+          <span class="num">03</span>
+          <h3>Következmények</h3>
+          <p>A működés pozitív és negatív társadalmi, gazdasági hatásai — ez utóbbiakat kell felismerni.</p>
+          <span class="flow-arrow">→</span>
+        </div>
+        <div class="flow-step accent">
+          <span class="num">04</span>
+          <h3>Egyensúlyrendszer</h3>
+          <p>Mérés, korrekció és védelem — a mechanizmusok, amelyek visszahatnak a rendszer szabályaira.</p>
+        </div>
+      </div>
+      <div class="feedback-note"><span class="arrow-icon">↺</span> A visszacsatolás eredménye visszahat a rendszer szabályaira és működésére.</div>
+    </div>
+  </section>
+
+  <!-- ALKALMAZÁSI MÓD / RULE -->
+  <section class="band">
+    <div class="wrap rule-callout">
+      <div class="rule-text">
+        <span class="eyebrow mono">ALKALMAZÁSI MÓD</span>
+        <p>Ha egy rendszer vagy az állam egy tevékenység működését jogi, gazdasági vagy intézményi keretekkel lehetővé teszi, ösztönzi, illetve abból jelentős bevételt szerez, akkor a működéséhez olyan arányos mechanizmusokra is szükség van, amelyek felismerik, mérik és kezelik annak negatív társadalmi következményeit.</p>
+        <p>Ez a rendszerszemlélet nem egyetlen problémáról szól: ugyanazzal a logikával vizsgálható a szerencsejáték, a közösségi média vagy az alkohol piaca is — bármely terület, ahol az ösztönzés és a mellékhatás egyszerre van jelen.</p>
+      </div>
+      <div class="rule-box">
+        <div class="quote-mark">”</div>
+        <p>Ha egy rendszer ösztönöz vagy biztosítja valaminek a jogi, gazdasági vagy intézményi kereteit, akkor szüksége van egy olyan rendszerre is, amely kezeli annak következményeit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERAKTÍV MODELL -->
+  <section id="interaktiv">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">INTERAKTÍV MODELL</span>
+        <h2>Mennyire van egyensúlyban a rendszer?</h2>
+        <p>Állítsd be az ösztönző és a korrekciós oldal erejét egy 1–5-ös szemléltető skálán, és nézd meg, hogyan viszonyulnak egymáshoz.</p>
+      </div>
+
+      <div class="model-panel">
+        <div class="slider-group">
+          <div class="slider-block">
+            <label>Ösztönző rendszer <span class="val mono" id="oszt-val">3</span></label>
+            <input type="range" id="oszt" min="1" max="5" step="1" value="3" aria-describedby="oszt-desc">
+            <div class="level-desc" id="oszt-desc"></div>
+          </div>
+          <div class="slider-block">
+            <label>Korrekciós rendszer <span class="val mono" id="korr-val">2</span></label>
+            <input type="range" id="korr" min="1" max="5" step="1" value="2" aria-describedby="korr-desc">
+            <div class="level-desc" id="korr-desc"></div>
+          </div>
+        </div>
+
+        <div class="balance-visual">
+          <div class="beam-wrap">
+            <div class="beam-track"></div>
+            <div class="beam-mid"></div>
+            <div class="beam-fill" id="beam-fill"></div>
+            <div class="beam-marker" id="beam-marker">Δ</div>
+          </div>
+        </div>
+
+        <div class="verdict" id="verdict"></div>
+        <p class="model-disclaimer">A vizualizáció nem tudományos mérőeszköz, hanem a gondolkodási keret szemléltetése. A tényleges helyzetet külön mérőszámokkal kell vizsgálni.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELVEK -->
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">ALAPFOGALMAK</span>
+        <h2>Cél, eszköz, alapelv, visszacsatolás</h2>
+      </div>
+      <div class="principle-grid">
+        <div class="principle">
+          <span class="tag">CÉL</span>
+          <h3>Rendszeregyensúly</h3>
+          <p>Az állapot, amikor a rendszer ösztönző és korrekciós oldala megfelelő arányban van.</p>
+        </div>
+        <div class="principle">
+          <span class="tag">ESZKÖZ</span>
+          <h3>Egyensúlyrendszer</h3>
+          <p>Az összehangolt mechanizmusok rendszere, amely az egyensúly kialakításán dolgozik.</p>
+        </div>
+        <div class="principle">
+          <span class="tag">ALAPELV</span>
+          <h3>Mérés nélkül nincs korrekció</h3>
+          <p>A mellékhatásokat előbb láthatóvá és követhetővé kell tenni.</p>
+        </div>
+        <div class="principle">
+          <span class="tag">VISSZACSATOLÁS</span>
+          <h3>Az eredmény számít</h3>
+          <p>A szabályoknak és forrásoknak reagálniuk kell a mért következményekre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALKALMAZÁSI TERÜLETEK -->
+  <section id="teruletek">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">ALKALMAZÁSI TERÜLETEK</span>
+        <h2>Egy szemlélet. Különböző rendszerek.</h2>
+        <p>Az Egyensúlyrendszer nem egyetlen problémáról szól. Ugyanazzal a szemlélettel különböző társadalmi és gazdasági rendszerek ösztönző és korrekciós mechanizmusai is vizsgálhatók. Kattints egy területre a részletekért.</p>
+      </div>
+
+      <div class="area-grid" id="area-grid">
+        <div class="area-card" tabindex="0" data-color="#1667C4">
+          <div class="area-top">
+            <span class="area-mark" style="background:#1667C4;">S</span>
+            <div>
+              <h3><a href="szerencsejatek/" style="color:inherit; text-decoration:none;">Szerencsejáték</a></h3>
+              <p>Állami szerepvállalás, bevételek, ösztönzés, függőségi kockázatok és az ezeket ellensúlyozó mechanizmusok.</p>
+            </div>
+            <button class="area-toggle" aria-label="Részletek megnyitása">+</button>
+          </div>
+          <div class="area-detail">
+            <div class="area-detail-inner">
+              <ul>
+                <li>Mérőszámok: függőségi arány, önkizárás, kezelésbe vontak száma, attitűdök</li>
+                <li>Szabályok: reklámkorlát, életkor-ellenőrzés, tétlimitek, azonosítás</li>
+                <li>Programok: prevenció, edukáció, kezelés, családsegítés</li>
+                <li>Visszacsatolás: kutatás, jelentés, hatásvizsgálat, felülvizsgálat</li>
+              </ul>
+              <a class="area-link" href="szerencsejatek/">Teljes elemzés megnyitása →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="area-card" tabindex="0" data-color="#178A5D">
+          <div class="area-top">
+            <span class="area-mark" style="background:#178A5D;">K</span>
+            <div>
+              <h3><a href="kozossegi-media/" style="color:inherit; text-decoration:none;">Közösségi média</a></h3>
+              <p>Figyelemgazdaság, platformösztönzők, algoritmikus működés és a társadalmi következmények korrekciója.</p>
+            </div>
+            <button class="area-toggle" aria-label="Részletek megnyitása">+</button>
+          </div>
+          <div class="area-detail">
+            <div class="area-detail-inner">
+              <ul>
+                <li>Mérőszámok: képernyőidő, mentális egészségi mutatók, dezinformáció-terjedés</li>
+                <li>Szabályok: életkor-ellenőrzés, átláthatósági kötelezettség, algoritmus-audit</li>
+                <li>Programok: médiatudatosság, digitális jólléti eszközök</li>
+                <li>Visszacsatolás: kutatás, platform-jelentések, szabályozói felülvizsgálat</li>
+              </ul>
+              <a class="area-link" href="kozossegi-media/">Teljes elemzés megnyitása →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="area-card" tabindex="0" data-color="#C4841A">
+          <div class="area-top">
+            <span class="area-mark" style="background:#C4841A;">A</span>
+            <div>
+              <h3><a href="alkohol/" style="color:inherit; text-decoration:none;">Alkohol</a></h3>
+              <p>Elérhetőség, gazdasági ösztönzők, társadalmi és egészségügyi következmények, valamint megelőzés és kezelés.</p>
+            </div>
+            <button class="area-toggle" aria-label="Részletek megnyitása">+</button>
+          </div>
+          <div class="area-detail">
+            <div class="area-detail-inner">
+              <ul>
+                <li>Mérőszámok: egy főre jutó fogyasztás, egészségügyi terhelés, közlekedési balesetek</li>
+                <li>Szabályok: életkor-határ, árazás, reklámkorlátozás, kiszolgálási idő</li>
+                <li>Programok: prevenció, addiktológiai kezelés, közösségi támogatás</li>
+                <li>Visszacsatolás: népegészségügyi jelentés, hatásvizsgálat</li>
+              </ul>
+              <a class="area-link" href="alkohol/">Teljes elemzés megnyitása →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section id="csatlakozas">
+    <div class="wrap signup-wrap">
+      <div>
+        <span class="eyebrow mono">CSATLAKOZÁS</span>
+        <h2 style="font-size:clamp(24px,3vw,30px); font-weight:800; color:var(--navy); line-height:1.25;">Értesülj az Egyensúlyrendszer következő lépéseiről.</h2>
+        <p style="margin-top:16px; font-size:15px; color:var(--slate); line-height:1.65; max-width:44ch;">Ez a prototípus még nem küldi el az adatokat. Az éles verzióban ezt hírlevél- vagy adatbázis-rendszerhez lehet kapcsolni.</p>
+      </div>
+
+      <div class="signup-form">
+        <form id="signup-form">
+          <div class="field">
+            <label for="name">Név</label>
+            <input type="text" id="name" name="name" placeholder="Teljes név" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail cím</label>
+            <input type="email" id="email" name="email" placeholder="nev@pelda.hu" required>
+          </div>
+          <div class="check-row">
+            <input type="checkbox" id="consent" required style="width:16px; height:16px;">
+            <label for="consent">Értesítést kérek</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Feliratkozás</button>
+          <p class="form-note">Demó űrlap · adat nem kerül elküldésre.</p>
+          <div class="success-msg" id="signup-success">Köszönjük! Ez egy demó — a valós verzióban itt kapnál visszaigazolást.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+              <line x1="16" y1="6" x2="16" y2="15" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M16 15 L12 21 L20 21 Z" fill="#EAF2FC"/>
+              <line x1="7" y1="13" x2="25" y2="17" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="7" cy="13" r="3.3" fill="#3B8EF0" stroke="#0A1B2E" stroke-width="1"/>
+              <circle cx="25" cy="17" r="3.3" fill="#4FCB9C" stroke="#0A1B2E" stroke-width="1"/>
+            </svg>
+          </span>
+          Egyensúlyrendszer
+        </div>
+        <p class="footer-tag">Rendszeregyensúly = cél · Egyensúlyrendszer = eszköz.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Modell</h4>
+          <a href="#modell">A fogalom</a>
+          <a href="#interaktiv">Interaktív modell</a>
+        </div>
+        <div class="footer-col">
+          <h4>Területek</h4>
+          <a href="szerencsejatek/">Szerencsejáték</a>
+          <a href="kozossegi-media/">Közösségi média</a>
+          <a href="alkohol/">Alkohol</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <a href="#csatlakozas">Csatlakozás</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Egyensúlyrendszer. Koncepcionális prototípus.</span>
+      <span>Rendszerszemlélet · Visszacsatolás</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---------- Interactive model ----------
+  const levelText = {
+    oszt: {
+      1:"Az állam nem ösztönzi és nem is szerez belőle bevételt.",
+      2:"Az állam engedélyezi a működést, de nem ösztönzi aktívan.",
+      3:"Az állam közvetlenül vagy közvetve bevételt szerez a tevékenységből.",
+      4:"Az állam aktívan ösztönzi és jelentős bevételre támaszkodik belőle.",
+      5:"A tevékenység az állami bevételek és politika szerves, ösztönzött része."
+    },
+    korr: {
+      1:"Nincs rendszeres mérés vagy korrekciós mechanizmus.",
+      2:"Az állam rendszeresen méri a negatív társadalmi következményeket és költségeket.",
+      3:"Léteznek szabályok és programok, amelyek reagálnak a mért hatásokra.",
+      4:"A korrekciós rendszer arányos forrásokkal és folyamatos felülvizsgálattal működik.",
+      5:"A mérés, szabályozás és visszacsatolás teljesen összehangolt és arányos."
+    }
+  };
+
+  const oszt = document.getElementById('oszt');
+  const korr = document.getElementById('korr');
+  const osztVal = document.getElementById('oszt-val');
+  const korrVal = document.getElementById('korr-val');
+  const osztDesc = document.getElementById('oszt-desc');
+  const korrDesc = document.getElementById('korr-desc');
+  const beamFill = document.getElementById('beam-fill');
+  const beamMarker = document.getElementById('beam-marker');
+  const verdict = document.getElementById('verdict');
+
+  function updateModel(){
+    const o = parseInt(oszt.value, 10);
+    const k = parseInt(korr.value, 10);
+    osztVal.textContent = o;
+    korrVal.textContent = k;
+    osztDesc.textContent = o + ". szint — " + levelText.oszt[o];
+    korrDesc.textContent = k + ". szint — " + levelText.korr[k];
+
+    const diff = o - k; // -4..4
+    const pct = 50 + diff * 10; // marker position along beam, 10..90
+    beamMarker.style.left = pct + '%';
+    beamMarker.style.background = diff === 0 ? '#178A5D' : (Math.abs(diff) >= 3 ? '#B23A3A' : '#C4841A');
+
+    if(diff >= 0){
+      beamFill.style.left = '50%';
+      beamFill.style.width = (pct - 50) + '%';
+    } else {
+      beamFill.style.left = pct + '%';
+      beamFill.style.width = (50 - pct) + '%';
+    }
+    beamFill.style.background = diff === 0 ? '#178A5D' : (Math.abs(diff) >= 3 ? '#B23A3A' : '#C4841A');
+
+    verdict.className = 'verdict';
+    if(Math.abs(diff) <= 1){
+      verdict.classList.add('verdict-balanced');
+      verdict.textContent = 'A két oldal közel van egymáshoz. Ez a szemléltető modell szerint a rendszeregyensúly felé mutat.';
+    } else if(Math.abs(diff) <= 2){
+      verdict.classList.add('verdict-warn');
+      verdict.textContent = diff > 0
+        ? 'Az ösztönző oldal erősebb a korrekciós oldalnál — érdemes a mérési és korrekciós mechanizmusokat erősíteni.'
+        : 'A korrekciós oldal erősebb az ösztönzésnél — a rendszer túlszabályozott lehet a tényleges kockázatokhoz képest.';
+    } else {
+      verdict.classList.add('verdict-strong');
+      verdict.textContent = diff > 0
+        ? 'Jelentős egyensúlytalanság: erős ösztönzés, gyenge korrekció. Ez a modell szerint magas kockázatú állapotot jelez.'
+        : 'Jelentős egyensúlytalanság a korrekció javára: a szabályozás jóval erősebb, mint az ösztönzés mértéke indokolná.';
+    }
+  }
+
+  oszt.addEventListener('input', updateModel);
+  korr.addEventListener('input', updateModel);
+  updateModel();
+
+  // ---------- Area cards ----------
+  document.querySelectorAll('.area-card').forEach(card => {
+    function toggle(){
+      const willOpen = !card.classList.contains('open');
+      card.classList.toggle('open');
+      const btn = card.querySelector('.area-toggle');
+      btn.textContent = willOpen ? '×' : '+';
+      btn.setAttribute('aria-label', willOpen ? 'Részletek bezárása' : 'Részletek megnyitása');
+    }
+    card.addEventListener('click', (e) => {
+      if(e.target.tagName === 'A') return;
+      toggle();
+    });
+    card.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+
+  // ---------- Signup demo ----------
+  const signupForm = document.getElementById('signup-form');
+  signupForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('signup-success').classList.add('show');
+    signupForm.querySelectorAll('input').forEach(i => i.value = i.type === 'checkbox' ? false : '');
+  });
+</script>
+
+</body>
+</html>
