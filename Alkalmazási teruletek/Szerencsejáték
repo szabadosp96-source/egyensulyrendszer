@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Szerencsejáték — Egyensúlyrendszer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+          <line x1="16" y1="6" x2="16" y2="15" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M16 15 L12 21 L20 21 Z" fill="#EAF2FC"/>
+          <line x1="7" y1="13" x2="25" y2="17" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="7" cy="13" r="3.3" fill="#3B8EF0" stroke="#0A1B2E" stroke-width="1"/>
+          <circle cx="25" cy="17" r="3.3" fill="#4FCB9C" stroke="#0A1B2E" stroke-width="1"/>
+        </svg>
+      </span>
+      Egyensúlyrendszer
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#modell">A modell</a>
+      <a href="../index.html#alapfogalmak">Alapfogalmak</a>
+      <a href="../index.html#interaktiv">Interaktív modell</a>
+      <a href="../index.html#teruletek">Alkalmazási területek</a>
+      <a href="../index.html#csatlakozas">Csatlakozás</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="../index.html">Főoldal</a><span class="sep">/</span>
+      <a href="../index.html#teruletek">Alkalmazási területek</a><span class="sep">/</span>
+      <span class="current">Szerencsejáték</span>
+    </div>
+  </div>
+
+  <section class="area-hero">
+    <div class="wrap">
+      <div class="area-hero-top">
+        <span class="area-mark-lg" style="background:#1667C4;">S</span>
+        <span class="eyebrow mono">ALKALMAZÁSI TERÜLET</span>
+      </div>
+      <h1>Szerencsejáték: ösztönzés és függőségi kockázat egyensúlya</h1>
+      <p class="lead">Az állam szerepvállalása, a piaci bevételek és a szerencsejáték-függőség társadalmi következményei ugyanabban a rendszerben léteznek együtt. Itt azt vizsgáljuk, mennyire arányos a mérés és a korrekció az ösztönzéshez képest.</p>
+      <div class="area-facts">
+        <div class="area-fact"><b>4</b><span>rendszerelem</span></div>
+        <div class="area-fact"><b>4</b><span>korrekciós kategória</span></div>
+        <div class="area-fact"><b>1</b><span>visszacsatolási ciklus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">A LOGIKA SZERENCSEJÁTÉK ESETÉBEN</span>
+        <h2>Hogyan alkalmazható itt az Egyensúlyrendszer?</h2>
+        <p>Ugyanaz a négylépéses modell, amit a főoldalon bemutatunk — itt szerencsejáték kontextusában végigvezetve.</p>
+      </div>
+      <div class="narrative-grid">
+        <div class="narrative-card">
+          <span class="tag">01 · ÖSZTÖNZŐK</span>
+          <h3>Ösztönzők</h3>
+          <p>Az állam koncessziós díjakból, játékadóból és részben állami tulajdonú szerencsejáték-szervezőkből közvetlen bevételhez jut, ezért gazdasági érdeke fűződik a piac fennmaradásához és bővüléséhez.</p>
+        </div>
+        <div class="narrative-card">
+          <span class="tag">02 · RENDSZER</span>
+          <h3>Rendszer</h3>
+          <p>A szerencsejáték-piac kaszinókból, fogadóirodákból, online platformokból és állami lottóból áll — jogilag szabályozott, de ösztönzött és adóztatott ágazat.</p>
+        </div>
+        <div class="narrative-card">
+          <span class="tag">03 · KÖVETKEZMÉNYEK</span>
+          <h3>Következmények</h3>
+          <p>Pozitív oldalon állami bevétel és munkahelyek állnak, negatív oldalon játékfüggőség, eladósodás, valamint családi és társadalmi problémák jelentkezhetnek.</p>
+        </div>
+        <div class="narrative-card" style="background:#12294A; border-left:3px solid #3B8EF0;">
+          <span class="tag">04 · EGYENSÚLYRENDSZER</span>
+          <h3>Egyensúlyrendszer</h3>
+          <p>Önkizárási rendszerek, reklám- és tétlimitek, kezelési és prevenciós programok, valamint rendszeres hatásvizsgálat alkotják a korrekciós oldalt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow mono">RÉSZLETEK</span>
+        <h2>Mérünk. Értékelünk. Beavatkozunk. Újramérünk.</h2>
+        <p>Az Egyensúlyrendszer négy eleme szerencsejáték esetében a következő konkrét mechanizmusokat jelentheti.</p>
+      </div>
+      <div class="detail-grid">
+      <div class="detail-card">
+        <div class="icon-row">
+          <span class="num-badge">01</span>
+          <h3>Mérőszámok</h3>
+        </div>
+        <ul>
+            <li><strong>Függőségi arány:</strong> hány érintett mutat kockázatos játékmintát vagy fordul segítségért</li>
+            <li><strong>Önkizárás:</strong> hányan élnek az önkéntes kizárás lehetőségével</li>
+            <li><strong>Kezelésbe vontak száma:</strong> hányan vesznek részt addiktológiai ellátásban</li>
+            <li><strong>Attitűdök:</strong> lakossági felmérések a kockázatérzékelésről</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <div class="icon-row">
+          <span class="num-badge">02</span>
+          <h3>Szabályok</h3>
+        </div>
+        <ul>
+            <li><strong>Reklámkorlát:</strong> mikor, hol és milyen formában jelenhet meg szerencsejáték-reklám</li>
+            <li><strong>Életkor-ellenőrzés:</strong> kötelező azonosítás a hozzáféréshez</li>
+            <li><strong>Tétlimitek:</strong> napi és heti befizetési, veszteséghatárok</li>
+            <li><strong>Azonosítás:</strong> valós idejű ellenőrzés online platformokon</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <div class="icon-row">
+          <span class="num-badge">03</span>
+          <h3>Programok</h3>
+        </div>
+        <ul>
+            <li><strong>Prevenció:</strong> iskolai és közösségi felvilágosító programok</li>
+            <li><strong>Edukáció:</strong> felelős játékra nevelő kampányok</li>
+            <li><strong>Kezelés:</strong> addiktológiai és pszichológiai ellátás elérhetősége</li>
+            <li><strong>Családsegítés:</strong> támogatás az érintett hozzátartozók számára</li>
+        </ul>
+      </div>
+      <div class="detail-card">
+        <div class="icon-row">
+          <span class="num-badge">04</span>
+          <h3>Visszacsatolás</h3>
+        </div>
+        <ul>
+            <li><strong>Kutatás:</strong> rendszeres társadalomtudományi vizsgálatok a piac hatásairól</li>
+            <li><strong>Jelentés:</strong> kötelező adatszolgáltatás az üzemeltetők részéről</li>
+            <li><strong>Hatásvizsgálat:</strong> lépést tart-e a szabályozás a piaci változásokkal</li>
+            <li><strong>Felülvizsgálat:</strong> a szabályok módosítása a mért eredmények alapján</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h3>Próbáld ki az interaktív egyensúly-modellt</h3>
+          <p>Állítsd be az ösztönző és korrekciós oldal erejét, és nézd meg, hogyan billen az egyensúly, ha a kettő nincs arányban.</p>
+        </div>
+        <a class="btn btn-primary" href="../index.html#interaktiv">Interaktív modell megnyitása →</a>
+      </div>
+
+      <div class="section-head" style="margin-top:64px;">
+        <span class="eyebrow mono">TOVÁBBI TERÜLETEK</span>
+        <h2>Nézd meg a többi alkalmazási területet is</h2>
+      </div>
+      <div class="other-areas">
+        <a class="other-area-chip" href="../kozossegi-media/">
+          <span class="dot" style="background:#178A5D;">K</span>
+          Közösségi média
+        </a>
+        <a class="other-area-chip" href="../alkohol/">
+          <span class="dot" style="background:#C4841A;">A</span>
+          Alkohol
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="19" height="19" xmlns="http://www.w3.org/2000/svg">
+          <line x1="16" y1="6" x2="16" y2="15" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M16 15 L12 21 L20 21 Z" fill="#EAF2FC"/>
+          <line x1="7" y1="13" x2="25" y2="17" stroke="#EAF2FC" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="7" cy="13" r="3.3" fill="#3B8EF0" stroke="#0A1B2E" stroke-width="1"/>
+          <circle cx="25" cy="17" r="3.3" fill="#4FCB9C" stroke="#0A1B2E" stroke-width="1"/>
+        </svg>
+          </span>
+          Egyensúlyrendszer
+        </div>
+        <p class="footer-tag">Rendszeregyensúly = cél · Egyensúlyrendszer = eszköz.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Modell</h4>
+          <a href="../index.html#modell">A fogalom</a>
+          <a href="../index.html#interaktiv">Interaktív modell</a>
+        </div>
+        <div class="footer-col">
+          <h4>Területek</h4>
+          <a href="../szerencsejatek/">Szerencsejáték</a>
+          <a href="../kozossegi-media/">Közösségi média</a>
+          <a href="../alkohol/">Alkohol</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kapcsolat</h4>
+          <a href="../index.html#csatlakozas">Csatlakozás</a>
+        </div>
+        <div class="footer-col">
+          <h4>Jogi</h4>
+          <a href="../adatvedelem/">Adatvédelem</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Egyensúlyrendszer. Koncepcionális prototípus.</span>
+      <span>Rendszerszemlélet · Visszacsatolás</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="cookie-banner" id="cookie-banner">
+  <p>Ez a weboldal a működéséhez szükséges sütiket (cookie-kat) használ. Bővebben az <a href="../adatvedelem/">Adatvédelmi tájékoztatóban</a> olvashatsz.</p>
+  <div class="cookie-banner-actions">
+    <button class="btn btn-primary" id="cookie-accept">Rendben</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookie-banner');
+    var accept = document.getElementById('cookie-accept');
+    if(!banner || !accept) return;
+    if(!localStorage.getItem('cookie-consent')){
+      setTimeout(function(){ banner.classList.add('show'); }, 500);
+    }
+    accept.addEventListener('click', function(){
+      localStorage.setItem('cookie-consent', 'accepted');
+      banner.classList.remove('show');
+    });
+  })();
+</script>
+
+</body>
+</html>
