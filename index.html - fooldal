@@ -370,6 +370,10 @@
           <h4>Kapcsolat</h4>
           <a href="#csatlakozas">Csatlakozás</a>
         </div>
+        <div class="footer-col">
+          <h4>Jogi</h4>
+          <a href="adatvedelem/">Adatvédelem</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -479,6 +483,28 @@
     document.getElementById('signup-success').classList.add('show');
     signupForm.querySelectorAll('input').forEach(i => i.value = i.type === 'checkbox' ? false : '');
   });
+</script>
+
+<div class="cookie-banner" id="cookie-banner">
+  <p>Ez a weboldal a működéséhez szükséges sütiket (cookie-kat) használ. Bővebben az <a href="adatvedelem/">Adatvédelmi tájékoztatóban</a> olvashatsz.</p>
+  <div class="cookie-banner-actions">
+    <button class="btn btn-primary" id="cookie-accept">Rendben</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookie-banner');
+    var accept = document.getElementById('cookie-accept');
+    if(!banner || !accept) return;
+    if(!localStorage.getItem('cookie-consent')){
+      setTimeout(function(){ banner.classList.add('show'); }, 500);
+    }
+    accept.addEventListener('click', function(){
+      localStorage.setItem('cookie-consent', 'accepted');
+      banner.classList.remove('show');
+    });
+  })();
 </script>
 
 </body>
