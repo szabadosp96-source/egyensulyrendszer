@@ -27,10 +27,11 @@
     </a>
     <nav class="nav-links">
       <a href="#modell">A modell</a>
+      <a href="#alapfogalmak">Alapfogalmak</a>
       <a href="#interaktiv">Interaktív modell</a>
       <a href="#teruletek">Alkalmazási területek</a>
+      <a href="#csatlakozas">Csatlakozás</a>
     </nav>
-    <a class="btn btn-primary nav-cta" href="#csatlakozas">Csatlakozás</a>
   </div>
 </header>
 
@@ -193,7 +194,7 @@
   </section>
 
   <!-- ELVEK -->
-  <section class="band">
+  <section class="band" id="alapfogalmak">
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow mono">ALAPFOGALMAK</span>
